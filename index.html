@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kai404.dev</title>
+    <style>
+        :root {
+            --bg:#121212;
+            --fg: #d1d5db;
+            --accent: #daa60c; /* Bus LED matrix yellow */
+            --dim: #6b7280;
+            --border: #262931;
+            --link: #2a79d9;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        a { color: var(--link); text-decoration: none; }
+        a:hover { text-decoration: underline; background: #1e293b; }
+
+        header { margin-bottom: 2.5rem; border-bottom: 1px dashed var(--border); padding-bottom: 1.5rem; }
+        .logo { color: var(--accent); font-weight: bold; font-size: 1.2rem; }
+        .status { color: var(--dim); font-size: 0.85rem; margin-top: 0.25rem; }
+
+        section { margin-bottom: 2.5rem; }
+        
+        .section-title {
+            color: var(--accent);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .section-title::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        /* Project Entry Formatting */
+        .project-list { list-style: none; }
+        .project-item { margin-bottom: 1.25rem; }
+        .project-header { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+        .project-title { font-weight: bold; color: #fff; }
+        .project-links { font-size: 0.85rem; }
+        .project-desc { color: #9ca3af; font-size: 0.9rem; margin-top: 0.15rem; }
+
+        /* Compact List Formatting */
+        .compact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 0.5rem 1.5rem;
+            list-style: none;
+        }
+        .compact-grid li { font-size: 0.85rem; }
+
+        footer {
+            border-top: 1px dashed var(--border);
+            padding-top: 1.5rem;
+            color: var(--dim);
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .tag {
+            color: var(--dim);
+            font-size: 0.75rem;
+            border: 1px solid var(--border);
+            padding: 0 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">kai404.dev</div>
+        <p>Developer. Python, C++, C#.</p>
+        <div class="status">> status: studying / building side projects</div>
+    </header>
+
+    <main>
+        <section>
+            <div class="section-title">01 // Main Projects</div>
+            <ul class="project-list">
+                <li class="project-item">
+                    <div class="project-header">
+                        <a href="https://mybustimes.cc" class="project-title" target="_blank">mybustimes.cc</a>
+                        <span class="project-links">
+                            <a href="https://mybustimes.cc" target="_blank">[site]</a> 
+                            <a href="https://github.com/NextStopLabs/MyBusTimes" target="_blank">[github]</a>
+                        </span>
+                    </div>
+                    <div class="project-desc">A website for transport enthusiasts.</div>
+                </li>
+                <li class="project-item">
+                    <div class="project-header">
+                        <a href="https://transportstatistics.com" class="project-title" target="_blank">transportstatistics.com</a>
+                        <span class="project-links">
+                            <a href="https://transportstatistics.com" target="_blank">[site]</a> 
+                            <a href="https://github.com/kai404py/TransportStatistics" target="_blank">[github]</a>
+                        </span>
+                    </div>
+                    <div class="project-desc">A website for logging and tracking public transport trips you've done.</div>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <div class="section-title">02 // Other Projects</div>
+            <ul class="project-list">
+                <li class="project-item">
+                    <div class="project-header">
+                        <a href="https://github.com/NextStopLabs/VTM-T200" class="project-title">VTM-T200</a>
+                        <span class="project-links">
+                            <a href="https://t200.nextstoplabs.org/" target="_blank">[site]</a> 
+                            <a href="https://github.com/NextStopLabs/VTM-T200" target="_blank">[github]</a>
+                        </span>
+                    </div>
+                    <div class="project-desc">A virtual ticket machine that links to MyBusTimes.</div>
+                </li>
+                <li class="project-item">
+                    <div class="project-header">
+                        <a href="https://github.com/NextStopLabs/FleetCount" class="project-title">FleetCount</a>
+                        <span class="project-links">
+                            <a href="https://fleetcount.nextstoplabs.org/" target="_blank">[site]</a> 
+                            <a href="https://github.com/NextStopLabs/FleetCount" target="_blank">[github]</a>
+                        </span>
+                    </div>
+                    <div class="project-desc">Checks how many of each bus type are still in public service.</div>
+                </li>
+                <li class="project-item">
+                    <div class="project-header">
+                        <a href="https://github.com/kai404py/stops-service" class="project-title">stops-service</a>
+                        <span class="project-links">
+                            <a href="https://stops.mybustimes.cc/" target="_blank">[site]</a> 
+                            <a href="https://github.com/NextStopLabs/stops-service" target="_blank">[github]</a>
+                        </span>
+                    </div>
+                    <div class="project-desc">A simple micro-service to return bus stops in a standard format.</div>
+                </li>
+                <li class="project-item">
+                    <div class="project-header">
+                        <a href="https://github.com/kai404py/blahaj.me.uk" class="project-title">blahaj.me.uk</a>
+                        <span class="project-links">
+                            <a href="https://blahaj.me.uk" target="_blank">[site]</a> 
+                            <a href="https://github.com/kai404py/blahaj.me.uk" target="_blank">[github]</a>
+                        </span>
+                    </div>
+                    <div class="project-desc">A funny site for my sharks.</div>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <div class="section-title">03 // University & College Repos</div>
+            
+            <div style="margin-bottom: 1rem;">
+                <strong style="color: #fff; font-size: 0.85rem;">UNI YEAR 1</strong>
+                <ul class="compact-grid" style="margin-top: 0.5rem;">
+                    <li><a href="https://github.com/kai404py/Grand-Theft-Bus">Grand-Theft-Bus</a></li>
+                    <li><a href="https://github.com/kai404py/MurderTrolly">MurderTrolly</a></li>
+                    <li><a href="https://github.com/kai404py/text-based-bus-sim">text-based-bus-sim</a></li>
+                    <li><a href="https://github.com/kai404py/Learning-Open-GL-V2">Learning-Open-GL-V2</a></li>
+                    <li><a href="https://github.com/kai404py/LeaningCPP">LearningCPP</a></li>
+                    <li><a href="https://github.com/kai404py/ascii-api">ascii-api</a></li>
+                    <li><a href="https://github.com/kai404py/kai-text-based-game">text-based-game</a></li>
+                    <li><a href="https://github.com/kai404py/C-SHARP-SCRIPTING-FOR-GAMES-ENGINES">C#-Scripting-Engine</a></li>
+                    <li><a href="https://github.com/kai404py/MECHANICS-PROTOTYPING">Mechanics-Prototyping</a></li>
+                    <li><a href="https://github.com/kai404py/GAME-PROTOTYPING-GDEV40010-2025-SUG2-2025-SUG2">Game-Prototyping</a></li>
+                    <li><a href="https://github.com/kai404py/Challenges">Challenges</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <strong style="color: #fff; font-size: 0.85rem;">COLLEGE YEAR 2</strong>
+                <ul class="compact-grid" style="margin-top: 0.5rem;">
+                    <li><a href="https://github.com/kai404py/FMP-Y2-UE5">FMP-Y2-UE5 (Unreal Engine 5)</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <span>em: <a href="mailto:me@kai404.dev">me@kai404.dev</a></span> | 
+            <span>gh: <a href="https://github.com/kai404py">kai404py</a></span> | 
+            <span>dc: <a href="https://discordapp.com/users/755846766653341756" target="_blank">kai404.py</a></span>
+        </div>
+        <div>kai404.dev</div>
+    </footer>
+
+</body>
+</html>
